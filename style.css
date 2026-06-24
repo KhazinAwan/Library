@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    padding: 1.5rem 3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    border-bottom: 2px solid rgb(87, 42, 165);
+
+
+}
+
+#newBookBtn {
+    padding: 0.75rem 1.5rem;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: rgb(87, 42, 165);
+    color: white;
+}
+
+main {
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#bookForm {
+    min-width: 20vw;
+    width: 25vw;
+    max-width: 30vw;
+    
+
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    background-color: white;
+    border-radius: 10px;
+
+    border: 1px solid black;
+
+}
+
+#bookForm div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+#bookForm input[type="text"],
+#bookForm input[type="number"] {
+    padding: 0.6rem;
+}
+
+input:not([type="checkbox"]):user-invalid {
+    border: 2px solid red;
+}
+
+input:not([type="checkbox"]):focus {
+    outline: none;
+    border: 2px solid rgb(87, 42, 165);
+}
+
+#bookForm div:has(input[type="checkbox"]) {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#bookForm input[type="checkbox"]{
+    width: 2rem;
+    height: 2rem;
+    accent-color: rgb(87, 42, 165);
+}
+
+#bookForm button {
+    padding: 0.75rem;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Book cards created by JS */
+
+.bookCard {
+    padding: 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    background-color: white;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bookCard button {
+    padding: 0.6rem;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
